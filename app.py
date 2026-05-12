@@ -20,12 +20,11 @@ niveles_db = {
         'titulo': 'El Oráculo de las Notas',
         'lore': 'Frente a ti flota una esfera de cristal mostrando números brillantes. "Conoce cómo serás juzgado en esta cruzada".',
         'contenido': [
-            '• Primer Parcial: 30% (Misiones básicas).',
-            '• Segundo Parcial: 30% (Dungeons intermedios).',
-            '• Proyecto Final: 40% (Batalla contra el Jefe Final - Tu App Móvil).'
+            '• 1P y 2P: Conocimiento 40%, Desempeño 20%, Producto 30%, Proyecto Integrador 10%.',
+            '• 3P: Conocimiento 10%, Desempeño 10%, Producto 30%, Proyecto Integrador 50%.'
         ],
-        'q1': {'pregunta': '¿Cuánto vale el Proyecto Final?', 'opciones': ['30%', '40%', '50%'], 'respuesta': '40%'},
-        'q2': {'pregunta': '¿Cuántos parciales regulares hay?', 'opciones': ['Uno', 'Dos', 'Tres'], 'respuesta': 'Dos'},
+        'q1': {'pregunta': '¿Cuánto vale el Proyecto Integrador en el 3er Parcial (3P)?', 'opciones': ['10%', '30%', '50%'], 'respuesta': '50%'},
+        'q2': {'pregunta': '¿Cuánto vale la Evidencia de Conocimiento en el 1er Parcial (1P)?', 'opciones': ['10%', '20%', '40%'], 'respuesta': '40%'},
         'siguiente_url': '/nivel/skills',
         'nombre_siguiente': 'Avanzar a los Skills'
     },
@@ -38,7 +37,7 @@ niveles_db = {
             '• Objetivos Particulares: Consumir APIs REST.',
             '• Objetivos Particulares: Diseñar interfaces de usuario (UI/UX) intuitivas.'
         ],
-        'q1': {'pregunta': '¿Cuál es el porcentaje mínimo de asistencia?', 'opciones': ['50%', '80%', '100%'], 'respuesta': '80%'},
+        'q1': {'pregunta': '¿Cuál es el objetivo general?', 'opciones': ['Hacer bases de datos', 'Desarrollar apps móviles', 'Reparar hardware'], 'respuesta': 'Desarrollar apps móviles'},
         'q2': {'pregunta': '¿Qué tipo de APIs aprenderás a consumir?', 'opciones': ['APIs REST', 'APIs de cocina', 'Ninguna'], 'respuesta': 'APIs REST'},
         'siguiente_url': '/nivel/tiempo',
         'nombre_siguiente': 'Avanzar a la Línea del Tiempo'
@@ -47,12 +46,13 @@ niveles_db = {
         'titulo': 'La Línea del Tiempo',
         'lore': 'Un reloj de arena gigante flota en el centro de la sala. Las arenas muestran los eventos futuros.',
         'contenido': [
-            '• Semana 4: Entrega del GDD (Game Design Document).',
-            '• Semana 8: Primer prototipo funcional.',
-            '• Semana 14: Defensa del Proyecto Final.'
+            '• 1er Parcial: 02-06-26',
+            '• 2do Parcial: 07-07-26',
+            '• 3er Parcial: 11-08-26',
+            '• Final: 17-08-26'
         ],
-        'q1': {'pregunta': '¿Qué se entrega en la Semana 8?', 'opciones': ['El GDD', 'Prototipo funcional', 'Proyecto Final'], 'respuesta': 'Prototipo funcional'},
-        'q2': {'pregunta': '¿En qué semana es la defensa del proyecto final?', 'opciones': ['Semana 4', 'Semana 10', 'Semana 14'], 'respuesta': 'Semana 14'},
+        'q1': {'pregunta': '¿Cuál es la fecha del 1er Parcial?', 'opciones': ['02-06-26', '07-07-26', '11-08-26'], 'respuesta': '02-06-26'},
+        'q2': {'pregunta': '¿Cuál es la fecha de evaluación Final?', 'opciones': ['11-08-26', '17-08-26', '02-06-26'], 'respuesta': '17-08-26'},
         'siguiente_url': '/',
         'nombre_siguiente': '¡Has sobrevivido! Regresar al inicio'
     }
