@@ -98,6 +98,27 @@
                 "Dedos de queso",
                 "Pizza trans"
             ]
+        },
+        {
+            "id_producto": 9,
+            "nombre": "Coca 1L",
+            "categoria": "Complemento",
+            "precio": 30,
+            "ingredientes": [
+                "azucar",
+                "chesquito"
+            ]
+        },
+        {
+            "id_producto": 10,
+            "nombre": "Estudiambre",
+            "categoria": "Combo",
+            "precio": 140,
+            "ingredientes": [
+                "Coca 1L",
+                "Crazy Bread",
+                "Pizza Clasica de Pepperoni"
+            ]
         }
     ],
     "pedidos": []
