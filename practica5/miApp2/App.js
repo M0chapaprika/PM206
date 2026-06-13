@@ -3,27 +3,27 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import {Saludo} from './components/Saludo';
 import {Saludo2} from './components/Saludo2';
+import {Perfil} from './components/Perfil';
 
 /*Zona2: Main - Hogar de los componentes*/
 export default function App() {
   return (
     <View style={styles.container}>
 
-      <Image source={require('./assets/wave.png')}/>
+      <Perfil nombre= "Rodriguez Ruiz Ian David" 
+      carrera= "Ingenieria en Sistemas Computacionales" 
+      materia= "Programacion Movil" 
+      cuatrimestre= "9"/>
 
-      <Text> ----------------Componente simple--------------</Text>
+      <Text>----------------------------------------------------------------</Text>
 
-      <Text> Hola mundo RN!</Text>
 
-      <Text> ----------------Componente compuesto--------------</Text>
-
-      <Saludo/>
-
-      <Text> ---------------Componente propio---------------</Text>
-
-      <Saludo2/>
-
-      <StatusBar style="auto" />
+      <Text>----------------------------------------------------------------</Text>
+      
+      <Perfil nombre= "Isaac menso" 
+      carrera= "Negocios" 
+      materia= "Abracitos" 
+      cuatrimestre= "10-1"/>
 
     </View>
   );
