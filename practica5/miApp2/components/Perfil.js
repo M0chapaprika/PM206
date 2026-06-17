@@ -1,32 +1,52 @@
-
-/*Perfil usando Desturacion*/
-
-import { View, Text, Button } from 'react-native';
+/* Perfil usando Destructuración */
+import { View, Text, Button, StyleSheet } from 'react-native';
 import React,{useState} from 'react';
 
-export const Perfil = ({ nombre, carrera, materia, cuatrimestre }) => {
+export const Perfil = ({ nombre, carrera, materia, cuatrimestre, estiloExterno }) => {
 
     const [mostrar, setMostrar] = useState(false);
 
-    return (
-        <View>
-            <Text>{nombre}</Text>
-
+    return(
+        <View style = {[styles.tarjeta, estiloExterno]}>
+            <Text style = {styles.nombre}>{nombre}</Text>
         {mostrar && 
-        <>             
-            <Text>{carrera}</Text>
-            <Text>{materia}</Text>
-            <Text>{cuatrimestre}</Text>
-         </>
+        <>
+            <Text style = {styles.carrera}>{carrera}</Text>
+            <Text style = {styles.otroTexto}>{materia}</Text>
+            <Text style = {styles.otroTexto}>{cuatrimestre}</Text>
+        </>
         }
 
-        <Button title= "Mostrar Perfil"
-        onPress={()=> setMostrar(!mostrar)}
+        <Button title= "Mostrar perfil"
+        onPress={() => setMostrar(!mostrar)}
         />
 
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    nombre: {
+        fontSize: 24,
+        fontWeight: 700,
+        textTransform: 'uppercase',
+    },
+    carrera: {
+        fontSize: 18,
+        color: 'blue',
+        fontFamily: 'Roboto',
+    },
+    otroTexto: {
+        fontSize: 12,
+        fontFamily: 'Courier',
+        fontStyle: 'italic',
+    },
+    tarjeta: {
+        borderWidth: 4,
+        margin: 20,
+        padding: 25,
+    }
+});
 
 /* 
 Perfil usando Props
@@ -43,4 +63,4 @@ export const Perfil = (props) => {
         </View>
     );
 }
- */
+*/
