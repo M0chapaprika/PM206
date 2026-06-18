@@ -1,16 +1,13 @@
 /* Zona 1: Importaciones de componentes y archivos */
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import MenuScreen from './screens/MenuScreen';
 
 /* Zona 2: Main - Hogar de los componentes */
-export default function App() {
+export default function FlatListScreen() {
   return (
     <View style = {styles.container}>
-    `
-      <MenuScreen/>`
-
-      <StatusBar style="auto" />
+    
+      <Text> Aqui va la practica de Seogul </Text>
 
     </View>
   );
