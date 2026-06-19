@@ -7,9 +7,11 @@ import SafeAreaScreen from './SafeAreaScreen';
 import PressableScreen from './PressableScreen';
 import TextInputScreen from './TextInputScreen';
 import FlatListScreen from './FlatListScreen';
-import ImageBackgroundScreen from './ImageBackgroungScreen';
+import ImageBackgroundScreen from './ImageBackgroundScreen';
 import ActivityIndicatorScreen from './ActivityIndicatorScreen';
 import ModalScreen from './ModalScreen';
+import EjActivityIndicator from './EjActivityScreen';
+import EjemploKeyboard from './EjKeyboardScreen';
 
 
 /* Zona 2: Main - Hogar de los componentes */
@@ -33,6 +35,10 @@ export default function MenuScreen() {
             return <ActivityIndicatorScreen/>
         case 'modal':
             return <ModalScreen/>
+        case 'ejactivityindicator':
+            return <EjActivityIndicator/>
+        case 'ejkeyboard':
+            return <EjemploKeyboard/>
         case 'menu':
             default:
             return (
@@ -55,6 +61,10 @@ export default function MenuScreen() {
                 <Button onPress={() => setScreen('activityindicator')} title='ActivityIndicator'/>
 
                 <Button onPress={() => setScreen('modal')} title='Modal'/>
+
+                <Button onPress={() => setScreen('ejactivityindicator')} title='Ej Activity Indicator'/>
+
+                <Button onPress={() => setScreen('ejkeyboard')} title='Ej Keyboard Avoiding View'/>
 
                 <StatusBar style="auto" />
 

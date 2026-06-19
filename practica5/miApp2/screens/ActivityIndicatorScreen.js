@@ -1,14 +1,15 @@
 /* Zona 1: Importaciones de componentes y archivos */
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import NuevoPerfilForm from '../components/NuevoPerfilForm';
 
 /* Zona 2: Main - Hogar de los componentes */
 export default function ActivityIndicatorScreen() {
   return (
     <View style = {styles.container}>
-    
-      <Text> Aqui va la practica de Alan </Text>
 
+      <NuevoPerfilForm/>
+    
     </View>
   );
 }

@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
-import { 
-  StyleSheet, 
-  Text, 
-  View, 
-  TextInput, 
-  Button, 
-  KeyboardAvoidingView, 
-  ActivityIndicator, 
-  Platform 
-} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, KeyboardAvoidingView, ActivityIndicator, Platform } from 'react-native';
 
-export function NuevoPerfilForm() {
+export default function NuevoPerfilForm() {
   const [nombre, setNombre] = useState('');
   const [carrera, setCarrera] = useState('');
   const [isLoading, setIsLoading] = useState(false); 
@@ -52,7 +43,6 @@ export function NuevoPerfilForm() {
         onChangeText={setCarrera}
       />
 
-      {/* Renderizado condicional para usar ActivityIndicator */}
       {isLoading ? (
         <ActivityIndicator size="small" color="#4D96FF" style={styles.loader} />
       ) : (
