@@ -5,6 +5,7 @@ export default function NuevoPerfilForm() {
   const [nombre, setNombre] = useState('');
   const [carrera, setCarrera] = useState('');
   const [isLoading, setIsLoading] = useState(false); 
+
   const handleGuardar = () => {
     if (nombre.trim() === '' || carrera.trim() === '') {
       alert('Por favor, llena todos los campos.');
@@ -15,7 +16,7 @@ export default function NuevoPerfilForm() {
 
     setTimeout(() => {
       setIsLoading(false);
-      alert(`¡Perfil de ${nombre} guardado con éxito!`);
+      alert(`Perfil de ${nombre} guardado con éxito`); 
       
       setNombre('');
       setCarrera('');
@@ -27,57 +28,59 @@ export default function NuevoPerfilForm() {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'} 
       style={styles.formContainer}
     >
-      <Text style={styles.titulo}>Agregar Perfil</Text>
-      
-      <TextInput 
-        style={styles.input} 
-        placeholder="Nombre completo" 
-        value={nombre}
-        onChangeText={setNombre}
-      />
+      <View style={styles.innerContainer}>
+        <Text style={styles.titulo}>Agregar Perfil</Text>
+        
+        <TextInput 
+          style={styles.input} 
+          placeholder="Nombre completo" 
+          value={nombre}
+          onChangeText={setNombre}
+        />
 
-      <TextInput 
-        style={styles.input} 
-        placeholder="Carrera" 
-        value={carrera}
-        onChangeText={setCarrera}
-      />
+        <TextInput 
+          style={styles.input} 
+          placeholder="Carrera" 
+          value={carrera}
+          onChangeText={setCarrera}
+        />
 
-      {isLoading ? (
-        <ActivityIndicator size="small" color="#4D96FF" style={styles.loader} />
-      ) : (
-        <Button title="Guardar Perfil" onPress={handleGuardar} color="#4D96FF" />
-      )}
+        {isLoading ? (
+          <ActivityIndicator size="small" color="#4D96FF" style={styles.loader} />
+        ) : (
+          <Button title="Guardar Perfil" onPress={handleGuardar} color="#4D96FF" />
+        )}
+      </View>
     </KeyboardAvoidingView>
   );
 }
 
 const styles = StyleSheet.create({
   formContainer: {
+    flex: 1, 
     backgroundColor: '#f9f9f9',
-    padding: 15,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#eee',
-    width: '90%', 
-    alignSelf: 'center',
-    marginTop: 20,
+  },
+  innerContainer: {
+    flex: 1,
+    padding: 20,
+    justifyContent: 'center', 
   },
   titulo: {
-    fontSize: 16,
+    fontSize: 22,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 20,
     textAlign: 'center',
     color: '#333',
   },
   input: {
-    height: 40,
+    height: 50, 
     borderColor: '#ccc',
     borderWidth: 1,
-    borderRadius: 5,
-    marginBottom: 10,
-    paddingHorizontal: 10,
+    borderRadius: 8,
+    marginBottom: 15,
+    paddingHorizontal: 15,
     backgroundColor: '#fff',
+    fontSize: 16,
   },
   loader: {
     marginVertical: 10,
