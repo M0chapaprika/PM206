@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button, ActivityIndicator } from 'react-native'
 
 export default function EjActivityIndicator() {
   const [descargando, setDescargando] = useState(false);
-  const [mensaje, setMensaje] = useState('Presiona para ver la galería de cargas');
+  const [mensaje, setMensaje] = useState('Presiona para ver la galeria de cargas');
 
   const iniciarDescarga = () => {
     setDescargando(true);
@@ -11,7 +11,7 @@ export default function EjActivityIndicator() {
 
     setTimeout(() => {
       setDescargando(false);
-      setMensaje('¡Descarga completada!');
+      setMensaje('Descarga completada!');
     }, 4000);
   };
 
@@ -42,7 +42,7 @@ export default function EjActivityIndicator() {
             <ActivityIndicator 
               size="large" 
               color="#FFFFFF" 
-              style={styles.indicadorConFondo} 
+              style={styles.conFondo} 
             />
           </View>
 
@@ -83,16 +83,11 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: '#FFF',
     borderRadius: 8,
-    elevation: 3,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
     width: '40%'
   },
-  indicadorConFondo: {
-    backgroundColor: '#333',
+  conFondo: {
+    backgroundColor: '#333', //8A2BE2
     padding: 10,
     borderRadius: 50,
-    marginTop: 5,
   }
 });
