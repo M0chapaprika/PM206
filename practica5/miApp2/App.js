@@ -7,8 +7,8 @@ import MenuScreen from './screens/MenuScreen';
 export default function App() {
   return (
     <View style = {styles.container}>
-    `
-      <MenuScreen/>`
+    
+      <MenuScreen/>
 
       <StatusBar style="auto" />
 

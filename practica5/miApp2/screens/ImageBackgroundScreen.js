@@ -7,23 +7,16 @@ import {
   ActivityIndicator
 } from 'react-native';
 
-import * as SplashScreen from 'expo-splash-screen';
-
-SplashScreen.preventAutoHideAsync().catch(() => {
-});
-
 export default function FondoPantalla() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function prepararAplicacion() {
       try {
-        
         await new Promise((resolve) => setTimeout(resolve, 3000));
       } catch (e) {
         console.warn(e);
       } finally {
-        
         setLoading(false);
       }
     }
@@ -31,15 +24,6 @@ export default function FondoPantalla() {
     prepararAplicacion();
   }, []);
 
-  
-  useEffect(() => {
-    if (!loading) {
-      
-      SplashScreen.hideAsync();
-    }
-  }, [loading]);
-
-  
   if (loading) {
     return (
       <View style={styles.splash}>
@@ -49,7 +33,6 @@ export default function FondoPantalla() {
     );
   }
 
-  
   return (
     <ImageBackground
       source={{ uri: 'https://picsum.photos/500/900' }}
@@ -59,7 +42,7 @@ export default function FondoPantalla() {
       <View style={styles.overlay}>
         <Text style={styles.titulo}>Bienvenido a React Native</Text>
         <Text style={styles.subtitulo}>
-          Ejemplo de ImageBackground y SplashScreen
+          Ejemplo de ImageBackground
         </Text>
       </View>
     </ImageBackground>
