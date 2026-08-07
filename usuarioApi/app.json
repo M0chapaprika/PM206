@@ -1,32 +1,48 @@
 {
   "expo": {
-    "name": "repa2",
+    "name": "app good",
     "slug": "repa2",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/splash-icon.png",
+    "icon": "./assets/mi-icono.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+    "image": "./assets/mi-splash.png",
+    "resizeMode": "contain", 
+    "backgroundColor": "#1A1A1A"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
+  "adaptiveIcon": {
+    "foregroundImage": "./assets/mi-icono.png",
+    "backgroundColor": "#FFFFFF"
+    },
+      "edgeToEdgeEnabled": true,
+      "package": "com.iandavidrr.repa2"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-router"
-    ]
+      "expo-router",
+      "expo-font",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "e0fa678e-3c6e-4cfb-9dfd-997c2e28fa7a"
+      }
+    }
   }
 }
